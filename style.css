@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #FFFFFF;
+    --text-color: #323238;
+    --button-color-hover: #3232382d;
+    --bg-icons: #E1E1E6;
+    --bg-icons-hover: #02799D;
+    --bg-icons-selection: #0496c3;
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body{
+    height: 100vh;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+    gap: 17.2rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.initial{
+    flex-direction: column;
+    align-items: center;
+    font-size: 12.6rem;
+}
+
+#timer{
+    font-family: "Roboto", sans-serif;
+}
+
+#controls{
+    margin-top: 4.8rem;
+    gap: 4rem;
+
+}
+
+#controls button{
+    background-color: transparent;
+    border: none;
+    font-size: 4.8rem;
+
+    cursor: pointer;
+}
+
+#musics{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+    max-width: 31rem;
+
+    color: var(--text-color);
+}
+
+#musics button{
+    border: none;
+    border-radius: 2.4rem;
+    padding: 4.8rem;
+
+    font-size: 5.8rem;
+    background-color: var(--bg-icons);
+
+    cursor: pointer;
+ 
+}
+
+#musics button:hover{
+    background-color: var(--bg-icons-hover);
+}
+
+.music-on{
+    color: var(--bg-icons-selection);
+}
+
+
+/* controls */
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}
+
+/* Acessibilidade */
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
